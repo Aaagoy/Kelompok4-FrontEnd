@@ -2,13 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  LayoutDashboard,
-  ReceiptText,
-  Package,
-  Calculator,
-  History,
-} from "lucide-react";
+import {LayoutDashboard, ReceiptText, Package, Calculator, History} from "lucide-react";
 
 const menuItems = [
   {
@@ -44,8 +38,8 @@ export default function Sidebar() {
   return (
     <aside className="fixed inset-y-0 left-0 z-50 flex w-56 flex-col bg-[#101b30] text-white">
       {/* Logo */}
-      <div className="flex h-24 items-center justify-center">
-        <img src="/logo.jpeg" alt="Logo" className="w-18 h-18 object-contain"/>
+      <div className="flex w-full h-32 items-center justify-center">
+        <img src="/logo.jpeg" alt="Logo" className="w-25 h-25 object-contain rounded-full"/>
       </div>
 
       {/* Menu */}
