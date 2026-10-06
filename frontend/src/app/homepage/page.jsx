@@ -211,7 +211,7 @@ export default function HomePage() {
                     className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-3 sm:p-4 flex flex-col flex-grow justify-between">
+                <div className="p-3 sm:p-4 flex flex-col justify-between">
                   <h4 className="font-medium text-slate-800 text-sm line-clamp-2 mb-2">
                     {prod.name}
                   </h4>

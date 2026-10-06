@@ -155,7 +155,7 @@ export default function DashboardPage() {
           TOPBAR
       ====================================================== */}
 
-      <header className="flex h-[74px] items-center justify-between border-b border-[#e7edf5] bg-white px-7">
+      <header className="flex items-center justify-between border-b border-[#e7edf5] bg-white px-7">
         {/* COMPANY */}
         <div className="flex items-center gap-3.5">
           <div className="flex h-10 w-10 items-center justify-center text-blue-600">
@@ -242,7 +242,7 @@ export default function DashboardPage() {
             return (
               <article
                 key={item.title}
-                className={`relative min-h-[120px] overflow-hidden rounded-xl border p-5 ${colorStyles.card}`}
+                className={`relative overflow-hidden rounded-xl border p-5 ${colorStyles.card}`}
               >
                 <div className="relative z-10 flex items-center gap-3.5">
                   <div
@@ -262,7 +262,7 @@ export default function DashboardPage() {
                   </div>
                 </div>
 
-                <div className="relative z-10 ml-[62px] mt-3 flex items-center gap-2">
+                <div className="relative z-10 mt-3 flex items-center gap-2">
                   <span className="text-xs font-bold text-[#0e9b67]">
                     ↑ {item.percentage}
                   </span>
