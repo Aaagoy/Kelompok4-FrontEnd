@@ -1,26 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-<<<<<<< HEAD
-import {
-  Store,
-  UserRound,
-  ChevronDown,
-  Search,
-  Eye,
-  FileText,
-  UsersRound,
-  CircleDollarSign,
-  Package,
-  LayoutDashboard,
-  ChevronLeft,
-  ChevronRight,
-  LogOut,
-} from "lucide-react";
-=======
 import { Store, UserRound, ChevronDown, Search, Eye, FileText, UsersRound, CircleDollarSign, Package, LayoutDashboard, ChevronLeft, ChevronRight, LogOut } from "lucide-react";
 import { useRouter } from "next/navigation";
->>>>>>> 10b1a5056a437b178d23fd28208b0d8f23fb4b50
 
 type Transaction = {
   id: string;
