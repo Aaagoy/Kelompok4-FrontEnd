@@ -14,6 +14,7 @@ import {
   LayoutDashboard,
   ChevronLeft,
   ChevronRight,
+  LogOut,
 } from "lucide-react";
 
 type Transaction = {
@@ -183,19 +184,11 @@ export default function DashboardPage() {
 
         {/* ADMIN */}
         <div className="flex items-center gap-2.5">
-          <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-[#e8eef7] text-[#536b8e]">
-            <UserRound size={23} strokeWidth={1.8} />
+          <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-[#e8eef7] text-[#536b8e]"><UserRound size={23} strokeWidth={1.8} />
           </div>
-
-          <span className="text-sm font-semibold text-[#17233c]">
-            Admin
-          </span>
-
-          <ChevronDown
-            size={16}
-            strokeWidth={1.8}
-            className="text-[#536b8e]"
-          />
+          <span className="text-sm font-semibold text-[#17233c]">Admin</span>
+          <ChevronDown size={16} strokeWidth={1.8} className="text-[#536b8e]"/>
+          <button className="flex text-sm border bg-[#E11D48] border-[#FECDD3] hover:bg-[#BE123C] font-mono text-[#FFFFFF] hover:text-[#FFFFFF] items-center p-2 rounded-xl cursor-pointer gap-1"><span><LogOut size={17}/></span>Logout</button>
         </div>
       </header>
 
