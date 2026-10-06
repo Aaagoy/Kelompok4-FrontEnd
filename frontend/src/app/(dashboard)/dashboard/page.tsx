@@ -1,22 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import {
-  Store,
-  UserRound,
-  ChevronDown,
-  Search,
-  Eye,
-  FileText,
-  ShoppingCart,
-  UsersRound,
-  CircleDollarSign,
-  Package,
-  LayoutDashboard,
-  ChevronLeft,
-  ChevronRight,
-  LogOut,
-} from "lucide-react";
+import { Store, UserRound, ChevronDown, Search, Eye, FileText, UsersRound, CircleDollarSign, Package, LayoutDashboard, ChevronLeft, ChevronRight, LogOut } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 type Transaction = {
   id: string;
@@ -143,7 +129,7 @@ const summaryData = [
 
 export default function DashboardPage() {
   const [search, setSearch] = useState("");
-
+  const router = useRouter();
   const filteredTransactions = useMemo(() => {
     const keyword = search.toLowerCase().trim();
 
@@ -158,6 +144,10 @@ export default function DashboardPage() {
         transaction.payment.toLowerCase().includes(keyword),
     );
   }, [search]);
+
+  function handleLogout(){
+    router.push('/homepage');
+  }
 
   return (
     <main className="min-h-screen bg-[#f5f8fc] text-[#15233f]">
@@ -174,7 +164,7 @@ export default function DashboardPage() {
 
           <div>
             <h1 className="text-[17px] font-bold text-[#16243f]">
-              Toko Maju Jaya
+              Harafina 
             </h1>
 
             <p className="mt-0.5 text-[13px] text-[#64789a]">
@@ -189,7 +179,10 @@ export default function DashboardPage() {
           </div>
           <span className="text-sm font-semibold text-[#17233c]">Admin</span>
           <ChevronDown size={16} strokeWidth={1.8} className="text-[#536b8e]"/>
-          <button className="flex text-sm border bg-[#E11D48] border-[#FECDD3] hover:bg-[#BE123C] font-mono text-[#FFFFFF] hover:text-[#FFFFFF] items-center p-2 rounded-xl cursor-pointer gap-1"><span><LogOut size={17}/></span>Logout</button>
+          <button type="button" className="flex text-sm border bg-[#E11D48] border-[#FECDD3] hover:bg-[#BE123C] font-mono text-[#FFFFFF] hover:text-[#FFFFFF] items-center p-2 rounded-lg cursor-pointer gap-1" onClick={handleLogout}>
+            <span><LogOut size={17}/></span>
+            Logout
+          </button>
         </div>
       </header>
 
