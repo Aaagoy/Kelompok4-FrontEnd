@@ -8,7 +8,6 @@ import {
   Search,
   Eye,
   FileText,
-  ShoppingCart,
   UsersRound,
   CircleDollarSign,
   Package,
